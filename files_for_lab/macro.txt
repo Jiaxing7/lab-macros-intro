@@ -1,0 +1,70 @@
+/**
+ * Macro1 Macro
+ */
+function Macro1()
+{
+	Columns.Item("A:A").Select();
+	Selection.Delete(xlShiftToLeft);
+	(obj=>{
+		obj.EntireColumn.Hidden = false;
+		obj.ColumnWidth = 11.827451;
+	})(Selection);
+	(obj=>{
+		obj.EntireColumn.Hidden = false;
+		obj.ColumnWidth = 25.239216;
+	})(Columns.Item("B:B"));
+	(obj=>{
+		obj.EntireColumn.Hidden = false;
+		obj.ColumnWidth = 36.007843;
+	})(Columns.Item("C:C"));
+	(obj=>{
+		obj.EntireColumn.Hidden = false;
+		obj.ColumnWidth = 15.176471;
+	})(Columns.Item("E:E"));
+	Range("A1:E201").Select();
+	ActiveWindow.ScrollRow = 172;
+	Range("A1:E200").Select();
+	Selection.HorizontalAlignment = xlHAlignCenter;
+	(obj=>{
+		obj.Weight = xlThin;
+		obj.LineStyle = xlContinuous;
+	})(Selection.Borders.Item(xlEdgeLeft));
+	(obj=>{
+		obj.Weight = xlThin;
+		obj.LineStyle = xlContinuous;
+	})(Selection.Borders.Item(xlEdgeTop));
+	(obj=>{
+		obj.Weight = xlThin;
+		obj.LineStyle = xlContinuous;
+	})(Selection.Borders.Item(xlEdgeBottom));
+	(obj=>{
+		obj.Weight = xlThin;
+		obj.LineStyle = xlContinuous;
+	})(Selection.Borders.Item(xlEdgeRight));
+	(obj=>{
+		obj.Weight = xlThin;
+		obj.LineStyle = xlContinuous;
+	})(Selection.Borders.Item(xlInsideVertical));
+	(obj=>{
+		obj.Weight = xlThin;
+		obj.LineStyle = xlContinuous;
+	})(Selection.Borders.Item(xlInsideHorizontal));
+	Selection.Borders.Item(xlEdgeLeft).ColorIndex = xlColorIndexAutomatic;
+	Selection.Borders.Item(xlEdgeTop).ColorIndex = xlColorIndexAutomatic;
+	Selection.Borders.Item(xlEdgeBottom).ColorIndex = xlColorIndexAutomatic;
+	Selection.Borders.Item(xlEdgeRight).ColorIndex = xlColorIndexAutomatic;
+	Selection.Borders.Item(xlInsideVertical).ColorIndex = xlColorIndexAutomatic;
+	Selection.Borders.Item(xlInsideHorizontal).ColorIndex = xlColorIndexAutomatic;
+	ActiveWindow.ScrollRow = 1;
+	Range("A1:E1").Select();
+	(obj=>{
+		obj.Pattern = xlPatternSolid;
+		obj.ThemeColor = 6;
+		obj.TintAndShade = 0;
+		obj.PatternColorIndex = -4105;
+	})(Selection.Interior);
+	Selection.Font.Bold = true;
+	Columns.Item("E:E").Select();
+	Selection.NumberFormatLocal = "m/d/yy h:mm;@";
+
+}
